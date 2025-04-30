@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Metric Converter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="length.html">Length</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="mass.html">Mass</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="chart.html">Conversion Chart</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-section">
+            <div class="faq-search">
+                <input type="text" id="faqSearch" placeholder="Search FAQ...">
+            </div>
+
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="general">General</button>
+                <button class="category-btn" data-category="conversions">Conversions</button>
+                <button class="category-btn" data-category="accuracy">Accuracy</button>
+                <button class="category-btn" data-category="usage">Usage</button>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-category" id="general">
+                    <h2>General Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>What is the metric system?</h3>
+                        <div class="faq-answer">
+                            <p>The metric system, also known as the International System of Units (SI), is a decimal-based system of measurement used worldwide. It consists of base units like meters (length), kilograms (mass), and seconds (time), along with their decimal multiples and subdivisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why should I use the metric system?</h3>
+                        <div class="faq-answer">
+                            <p>The metric system offers several advantages:</p>
+                            <ul>
+                                <li>Universal acceptance and use in science and international trade</li>
+                                <li>Simple decimal-based conversions</li>
+                                <li>Consistent relationship between units</li>
+                                <li>Standard prefixes across all measurements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category" id="conversions">
+                    <h2>Conversion Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>How accurate are the conversions?</h3>
+                        <div class="faq-answer">
+                            <p>Our conversions are accurate to several decimal places and use internationally recognized conversion factors. For scientific or technical work requiring extreme precision, always verify with official standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why do I get different results from different converters?</h3>
+                        <div class="faq-answer">
+                            <p>Small variations between different converters can occur due to:</p>
+                            <ul>
+                                <li>Rounding differences</li>
+                                <li>Number of decimal places displayed</li>
+                                <li>Different conversion factors used</li>
+                                <li>Updates to official conversion standards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category" id="accuracy">
+                    <h2>Accuracy and Precision</h2>
+                    
+                    <div class="faq-item">
+                        <h3>How many decimal places should I use?</h3>
+                        <div class="faq-answer">
+                            <p>The number of decimal places depends on your needs:</p>
+                            <ul>
+                                <li>General use: 2-3 decimal places is usually sufficient</li>
+                                <li>Scientific work: 4-6 decimal places may be necessary</li>
+                                <li>Engineering: Follow industry standards for your field</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is significant figures and why do they matter?</h3>
+                        <div class="faq-answer">
+                            <p>Significant figures indicate the precision of a measurement. They include all certain digits plus one uncertain digit. Maintaining appropriate significant figures ensures you're not implying more precision than your original measurement had.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category" id="usage">
+                    <h2>Usage Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I use this converter for commercial purposes?</h3>
+                        <div class="faq-answer">
+                            <p>While our converter is free to use, for commercial and legal purposes, we recommend:</p>
+                            <ul>
+                                <li>Verifying results with official standards</li>
+                                <li>Consulting relevant industry regulations</li>
+                                <li>Using certified measurement tools when required</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How often are the conversion rates updated?</h3>
+                        <div class="faq-answer">
+                            <p>Standard conversion factors for physical units remain constant. However, currency conversion rates are updated regularly from reliable financial sources. Check the currency converter page for the latest update timestamp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Metric Converter. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/converters.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>

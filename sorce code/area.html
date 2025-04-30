@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Converter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .converter-section {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .converter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .input-group input {
+            flex: 2;
+        }
+
+        .input-group select {
+            flex: 1;
+        }
+
+        .result-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .common-conversions {
+            margin-top: 3rem;
+        }
+
+        .common-conversions h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .conversion-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .conversion-table th,
+        .conversion-table td {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .conversion-table th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><i class="fas fa-vector-square"></i> Area Converter</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="length.html"><i class="fas fa-ruler"></i> Length</a></li>
+                    <li><a href="area.html" class="active"><i class="fas fa-vector-square"></i> Area</a></li>
+                    <li><a href="volume.html"><i class="fas fa-cube"></i> Volume</a></li>
+                    <li><a href="mass.html"><i class="fas fa-weight-hanging"></i> Mass</a></li>
+                    <li><a href="temperature.html"><i class="fas fa-thermometer-half"></i> Temperature</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-intro">
+            <h2>Area Converter</h2>
+            <p>Convert between different units of area measurement</p>
+        </div>
+
+        <div class="converter-box">
+            <div class="conversion-form">
+                <div class="input-group">
+                    <label for="fromValue">Enter Area Value</label>
+                    <input type="number" id="fromValue" placeholder="Enter value" step="any">
+                    <select id="fromUnit">
+                        <option value="sqm">Square Meters (m²)</option>
+                        <option value="sqkm">Square Kilometers (km²)</option>
+                        <option value="sqft">Square Feet (ft²)</option>
+                        <option value="sqyd">Square Yards (yd²)</option>
+                        <option value="acre">Acres</option>
+                        <option value="hectare">Hectares</option>
+                    </select>
+                </div>
+
+                <button class="swap-btn" onclick="swapUnits()" title="Swap units">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="to-group">
+                    <label for="toUnit">Convert To</label>
+                    <select id="toUnit">
+                        <option value="sqm">Square Meters (m²)</option>
+                        <option value="sqkm">Square Kilometers (km²)</option>
+                        <option value="sqft">Square Feet (ft²)</option>
+                        <option value="sqyd">Square Yards (yd²)</option>
+                        <option value="acre">Acres</option>
+                        <option value="hectare">Hectares</option>
+                    </select>
+                </div>
+
+                <button onclick="convert()" class="convert-btn">
+                    <i class="fas fa-sync-alt"></i> Convert
+                </button>
+
+                <div id="result" class="result-box">
+                    <div class="result-placeholder">
+                        <i class="fas fa-calculator"></i>
+                        <p>Result will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-conversions">
+            <h3><i class="fas fa-star"></i> Common Area Conversions</h3>
+            <div class="table-container">
+                <table id="commonConversions">
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <p>&copy; 2024 Metric Converter | Made with <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="assets/js/converters.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>

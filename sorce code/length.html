@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Conversion - Metric Converter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Length Conversion</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="length.html">Length</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="mass.html">Mass</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="chart.html">Conversion Chart</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="converter-section">
+            <div class="converter-form">
+                <div class="input-group">
+                    <input type="number" id="fromValue" placeholder="Enter value">
+                    <select id="fromUnit">
+                        <option value="millimeters">Millimeters (mm)</option>
+                        <option value="centimeters">Centimeters (cm)</option>
+                        <option value="meters">Meters (m)</option>
+                        <option value="kilometers">Kilometers (km)</option>
+                        <option value="inches">Inches (in)</option>
+                        <option value="feet">Feet (ft)</option>
+                        <option value="yards">Yards (yd)</option>
+                        <option value="miles">Miles (mi)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span>to</span>
+                    <select id="toUnit">
+                        <option value="meters">Meters (m)</option>
+                        <option value="millimeters">Millimeters (mm)</option>
+                        <option value="centimeters">Centimeters (cm)</option>
+                        <option value="kilometers">Kilometers (km)</option>
+                        <option value="inches">Inches (in)</option>
+                        <option value="feet">Feet (ft)</option>
+                        <option value="yards">Yards (yd)</option>
+                        <option value="miles">Miles (mi)</option>
+                    </select>
+                </div>
+                <button onclick="convertLength()">Convert</button>
+                <div class="result-box" id="result">
+                    Result will appear here
+                </div>
+            </div>
+
+            <div class="common-conversions">
+                <h3>Common Length Conversions</h3>
+                <table class="conversion-table">
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Multiply By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inches</td>
+                            <td>Millimeters</td>
+                            <td>25.4</td>
+                        </tr>
+                        <tr>
+                            <td>Feet</td>
+                            <td>Meters</td>
+                            <td>0.3048</td>
+                        </tr>
+                        <tr>
+                            <td>Yards</td>
+                            <td>Meters</td>
+                            <td>0.9144</td>
+                        </tr>
+                        <tr>
+                            <td>Miles</td>
+                            <td>Kilometers</td>
+                            <td>1.60934</td>
+                        </tr>
+                        <tr>
+                            <td>Meters</td>
+                            <td>Feet</td>
+                            <td>3.28084</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Metric Converter. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/converters.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>

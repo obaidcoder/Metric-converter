@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conversion - Metric Converter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Currency Conversion</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="length.html">Length</a></li>
+                <li><a href="area.html">Area</a></li>
+                <li><a href="volume.html">Volume</a></li>
+                <li><a href="mass.html">Mass</a></li>
+                <li><a href="temperature.html">Temperature</a></li>
+                <li><a href="currency.html">Currency</a></li>
+                <li><a href="chart.html">Conversion Chart</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="converter-section">
+            <div class="converter-form">
+                <div class="input-group">
+                    <input type="number" id="fromValue" placeholder="Enter value">
+                    <select id="fromUnit">
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="AUD">Australian Dollar (AUD)</option>
+                        <option value="CAD">Canadian Dollar (CAD)</option>
+                        <option value="CHF">Swiss Franc (CHF)</option>
+                        <option value="CNY">Chinese Yuan (CNY)</option>
+                        <option value="INR">Indian Rupee (INR)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span>to</span>
+                    <select id="toUnit">
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="AUD">Australian Dollar (AUD)</option>
+                        <option value="CAD">Canadian Dollar (CAD)</option>
+                        <option value="CHF">Swiss Franc (CHF)</option>
+                        <option value="CNY">Chinese Yuan (CNY)</option>
+                        <option value="INR">Indian Rupee (INR)</option>
+                    </select>
+                </div>
+                <button onclick="convertCurrency()">Convert</button>
+                <div class="result-box" id="result">
+                    Result will appear here
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p>Note: Currency conversion rates are updated regularly from external sources. The rates shown are for reference only and may not reflect real-time market rates.</p>
+                <p>Last updated: <span id="lastUpdate">Loading...</span></p>
+            </div>
+
+            <div class="common-conversions">
+                <h3>Popular Currency Pairs</h3>
+                <table class="conversion-table">
+                    <thead>
+                        <tr>
+                            <th>Currency Pair</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EUR/USD</td>
+                            <td>Euro / US Dollar</td>
+                        </tr>
+                        <tr>
+                            <td>GBP/USD</td>
+                            <td>British Pound / US Dollar</td>
+                        </tr>
+                        <tr>
+                            <td>USD/JPY</td>
+                            <td>US Dollar / Japanese Yen</td>
+                        </tr>
+                        <tr>
+                            <td>USD/CHF</td>
+                            <td>US Dollar / Swiss Franc</td>
+                        </tr>
+                        <tr>
+                            <td>EUR/GBP</td>
+                            <td>Euro / British Pound</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Metric Converter. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/converters.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>

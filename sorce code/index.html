@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric Converter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><i class="fas fa-exchange-alt"></i> Metric Converter</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="length.html"><i class="fas fa-ruler"></i> Length</a></li>
+                    <li><a href="area.html"><i class="fas fa-vector-square"></i> Area</a></li>
+                    <li><a href="volume.html"><i class="fas fa-cube"></i> Volume</a></li>
+                    <li><a href="mass.html"><i class="fas fa-weight-hanging"></i> Mass</a></li>
+                    <li><a href="temperature.html"><i class="fas fa-thermometer-half"></i> Temperature</a></li>
+                    <li><a href="currency.html"><i class="fas fa-coins"></i> Currency</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-intro">
+            <h2>Welcome to Metric Converter</h2>
+            <p>Convert between different units quickly and accurately</p>
+        </div>
+
+        <div class="converter-box">
+            <div class="converter-type">
+                <label for="conversionType">
+                    <i class="fas fa-ruler"></i>
+                    Select Conversion Type
+                </label>
+                <select id="conversionType">
+                    <option value="length"><i class="fas fa-ruler"></i> Length</option>
+                    <option value="area"><i class="fas fa-vector-square"></i> Area</option>
+                    <option value="volume"><i class="fas fa-cube"></i> Volume</option>
+                    <option value="mass"><i class="fas fa-weight-hanging"></i> Mass</option>
+                    <option value="temperature"><i class="fas fa-thermometer-half"></i> Temperature</option>
+                    <option value="currency"><i class="fas fa-coins"></i> Currency</option>
+                </select>
+            </div>
+
+            <div class="conversion-form">
+                <div class="input-group">
+                    <label for="fromValue">Enter Value</label>
+                    <input type="number" id="fromValue" placeholder="Enter value" step="any">
+                    <select id="fromUnit"></select>
+                </div>
+
+                <button class="swap-btn" onclick="swapUnits()" title="Swap units">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="to-group">
+                    <label for="toUnit">Convert To</label>
+                    <select id="toUnit"></select>
+                </div>
+
+                <button onclick="convert()" class="convert-btn">
+                    <i class="fas fa-sync-alt"></i> Convert
+                </button>
+
+                <div id="result" class="result-box">
+                    <div class="result-placeholder">
+                        <i class="fas fa-calculator"></i>
+                        <p>Result will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-conversions">
+            <h3><i class="fas fa-star"></i> Common Conversions</h3>
+            <div class="table-container">
+                <table id="commonConversions">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <p>&copy; 2024 Metric Converter | Made with <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="assets/js/converters.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>
